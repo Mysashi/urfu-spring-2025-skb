@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form action="#" th:object="${ticketForm}" method="post">
+    <H1>TICKETFORM</H1>
+    <table>
+        <tr>
+            <td>Title:</td>
+            <p>Title: Название от 10 до 30 символов</p>
+            <td><input type="text" th:field="*{title}" /></td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <p>Description: Поле не должно быть пустым</p>
+            <td><input type="text" th:field="*{description}" /></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <p>Email: Заполните gmail по форме для прохождения валидации</p>
+            <td><input type="text" th:field="*{email}" /></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
